@@ -1,0 +1,20 @@
+extends template/main
+
+block variables
+	- var title = 'Главная страница'
+	- var pageClass = 'index-page'
+
+
+
+block content
+	include modules/section/products
+	include modules/section/sliders
+	include modules/section/brands
+	include modules/section/advantages
+	include modules/section/news
+	include modules/section/assortment
+	include modules/section/questions
+
+
+
+

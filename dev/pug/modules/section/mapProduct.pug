@@ -1,0 +1,206 @@
+.s-mapProduct
+    .container.container-big
+        .mapProduct
+            .breadcrumbs(itemscope="" itemtype="http://schema.org/BreadcrumbList")
+                .breadcrumbs__item(itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem")
+                    a(href="#" itemprop="name") Главная
+                    meta(itemprop="position" content="0")
+                .breadcrumbs__item(itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem")
+                    a(href="#" itemprop="name") Фильтры для питевой воды
+                    meta(itemprop="position" content="1")
+                .breadcrumbs__current Проточные фильтры
+            .mapProduct__inner(itemscope="" itemtype="http://schema.org/Product")
+                h1.mapProduct__title(itemprop="name") Фильтр для воды Ecosoft Standart
+                .mapCard(itemprop="offers" itemscope="" itemtype="http://schema.org/Offer")
+                    .mapCard-gallery
+                        .mapCard-thumbs(data-map-thumbs)
+                            .mapCard-thumbs__slide
+                                img(src="static/images/img/map-slider/2.jpg" itemprop="image" alt="Слайдер")
+                            .mapCard-thumbs__slide
+                                img(src="static/images/img/map-slider/3.jpg" itemprop="image" alt="Слайдер")
+                            .mapCard-thumbs__slide
+                                img(src="static/images/img/map-slider/4.jpg" itemprop="image" alt="Слайдер")
+                            .mapCard-thumbs__slide
+                                img(src="static/images/img/map-slider/5.jpg" itemprop="image" alt="Слайдер")
+                            .mapCard-thumbs__slide
+                                img(src="static/images/img/map-slider/5.jpg" itemprop="image" alt="Слайдер")
+                        .mapCard-sliders
+                            +icon('lupe','mapCard-sliders__icon')
+                            .mapCard-slider(data-map-slider)
+                                a(href="static/images/img/map-slider/1.jpg" data-fancybox="gallery" data-caption="Фильтр 1").mapCard-slider__slide
+                                    .i-card__status._red распродажа
+                                    img(src="static/images/img/map-slider/1.jpg" itemprop="image" alt="Слайдер")
+                                a(href="static/images/img/map-slider/1.jpg" data-fancybox="gallery" data-caption="Фильтр 2").mapCard-slider__slide
+                                    .i-card__status._red распродажа
+                                    .i-card__sale
+                                        span -30%
+                                        img(src="static/images/img/plashka.png" alt="Картинка")
+                                    img(src="static/images/img/map-slider/1.jpg" itemprop="image"  alt="Слайдер")
+                                a(href="static/images/img/map-slider/1.jpg" data-fancybox="gallery" data-caption="Фильтр 3").mapCard-slider__slide
+                                    img(src="static/images/img/map-slider/1.jpg" itemprop="image" alt="Слайдер")
+                                a(href="static/images/img/map-slider/1.jpg" data-fancybox="gallery" data-caption="Фильтр 4").mapCard-slider__slide
+                                    .i-card__sale
+                                        span -30%
+                                        img(src="static/images/img/plashka.png" alt="Картинка")
+                                    img(src="static/images/img/map-slider/1.jpg" itemprop="image" alt="Слайдер")
+                                a(href="static/images/img/map-slider/1.jpg" data-fancybox="gallery" data-caption="Фильтр 5").mapCard-slider__slide
+                                    img(src="static/images/img/map-slider/1.jpg" itemprop="image" alt="Слайдер")
+                    .mapCard-info
+                        .mapCard-info__top
+                            .mapCard-info__status.productStatus(style="display: none;")
+                                +icon('check','productStatus__icon')
+                                | В наличии
+                                a(href="#")
+                                    span Показать
+                                <meta itemprop="availability" content="http://schema.org/InStock"/>
+                            .mapCard-info__status.productStatus.not-available
+                                +icon('close2','productStatus__icon')
+                                | Нет в наличии
+                                a(href="#" data-popup-target="#Coming")
+                                    span Сообщить о поступлении
+                                <meta itemprop="availability" content="http://schema.org/OutOfStock"/>
+                            .mapCard-info__action
+                                a(href="#").mapFavorites
+                                    +icon('like','mapFavorites__icon')
+                                    | В избранное
+                                a(href="#").mapCompare
+                                    +icon('compare','mapCompare__icon')
+                                    | Сравнить
+
+                        .mapCard-info__body
+                            .mapCard-info__body_top
+                                span Цена за 1 ед.
+                                .share
+                                    .share__btn
+                                        +icon('share','share__btn_icon')
+                                        | Поделиться
+                                    .share__list
+                                        a(href="#").share__item 
+                                            img(src="static/images/img/socials/vk.svg" alt="vk")
+                                        a(href="#").share__item 
+                                            img(src="static/images/img/socials/facebook.svg" alt="facebook")
+                                        a(href="#").share__item 
+                                            img(src="static/images/img/socials/whatsapp2.svg" alt="whatsapp")
+                                        a(href="#").share__item 
+                                            img(src="static/images/img/socials/ok.svg" alt="ok")
+                                        a(href="#").share__item 
+                                            img(src="static/images/img/socials/pinterest.svg" alt="pinterest")
+                            .mapCard-info__body_price 
+                                //- .price-current 7000 р.
+                                .price-sale
+                                    .price-sale__new(itemprop="price") 
+                                        | 6500 
+                                        span(itemprop="priceCurrency" content="RUB") р.
+                                    .price-sale__old(itemprop="price") 
+                                        | 7000 
+                                        span(itemprop="priceCurrency" content="RUB") р.
+                            .mapCard-info__body_bottom
+                                .cardCounter
+                                    .cardCounter__btn(data-counter-min)
+                                    .cardCounter__value(data-counter-val) 1
+                                    .cardCounter__btn(data-counter-max)
+                                button(type="button" class="Button Button-basket" data-popup-target="#Call")
+                                    +icon('cart','Button-basket__icon')
+                                    span В корзину
+                                button(type="button" class="Button Button-oneclick" data-popup-target="#OneClick") Купить в 1 клик
+                        .mapCard-info__options
+                            .prodFeature
+                                .prodFeature__item
+                                    .prodFeature__name Артикуль
+                                    .prodFeature__detail 250017
+                                .prodFeature__item
+                                    .prodFeature__name Бренд
+                                    .prodFeature__detail Ecosoft Standart
+                                .prodFeature__item
+                                    .prodFeature__name Производитель
+                                    .prodFeature__detail Германия
+                                .prodFeature__item
+                                    .prodFeature__name Назначение
+                                    .prodFeature__detail Для жесткой воды
+                            .prodOffer
+                                .prodOffer__check
+                                    +icon('info','prodOffer__icon')
+                                | Этот товар вы можете купить
+                                br
+                                | по цене 
+                                b 6 500 руб. 
+                                a(href="#") 
+                                    span в комплекте 
+                .mapOptions
+                    .mapOptions__tabs
+                        .mapOptions__tab._active Характеристики
+                        .mapOptions__tab Описание
+                        .mapOptions__tab Доставка и оплата
+                        .mapOptions__tab Сертификаты
+                        .mapOptions__tab Монтаж
+                    .mapOptions__list
+                        .mapOptions__item
+                            .prodFeature
+                                .prodFeature__item
+                                    .prodFeature__name Мощность
+                                    .prodFeature__detail 250017
+                                .prodFeature__item
+                                    .prodFeature__name Бренд
+                                    .prodFeature__detail Ecosoft Standart
+                                .prodFeature__item
+                                    .prodFeature__name Производитель
+                                    .prodFeature__detail Германия
+                                .prodFeature__item
+                                    .prodFeature__name Назначение
+                                    .prodFeature__detail Для жесткой воды
+                                .prodFeature__item
+                                    .prodFeature__name Мощность
+                                    .prodFeature__detail 250017
+                                .prodFeature__item
+                                    .prodFeature__name Бренд
+                                    .prodFeature__detail Ecosoft Standart
+                                .prodFeature__item
+                                    .prodFeature__name Производитель
+                                    .prodFeature__detail Германия
+                                .prodFeature__item
+                                    .prodFeature__name Назначение
+                                    .prodFeature__detail Для жесткой воды
+                        .mapOptions__item
+                            .assortment
+                                p В нашем магазине Вы можете приобрести качественную и сертифицированную продукцию для очистки воды. Наша лаборатория определяет качество воды, в т.ч. наличия сторонних примесей, организмом, а также параметры жесткости. Компания ФИЛЬТРОЛОГИЯ на базе собственной лаборатории проводит исследования воды:
+                                ul
+                                    li Фильтры-кувшины;
+                                    li Кассеты фильтрующие сменные;
+                                    li Проточные системы;
+                                    li Системы обратного осмоса;
+                            a(data-fancybox href="https://www.youtube.com/watch?v=2Ye_pCYAh9w&t=2s").d-video
+                                img(src="static/images/img/poster.jpg"  alt="Poster")
+                        .mapOptions__item
+                            .assortment(itemprop="description" itemscope="" itemtype="http://schema.org/Offer")
+                                p В нашем магазине Вы можете приобрести качественную и сертифицированную продукцию для очистки воды. Наша лаборатория определяет качество воды, в т.ч. наличия сторонних примесей, организмом, а также параметры жесткости. Компания ФИЛЬТРОЛОГИЯ на базе собственной лаборатории проводит исследования воды:
+                                ul
+                                    li Фильтры-кувшины;
+                                    li Кассеты фильтрующие сменные;
+                                    li Проточные системы;
+                                    li Системы обратного осмоса;
+                            a(data-fancybox href="https://www.youtube.com/watch?v=2Ye_pCYAh9w&t=2s").d-video
+                               img(src="static/images/img/poster.jpg"  alt="Poster")
+                        .mapOptions__item
+                            .certificates
+                                a(href="static/images/img/sertificate/1.jpg" data-fancybox="sert" data-caption="Сертификат качества продукции").certificates__item
+                                    .certificates__img
+                                        img(src="static/images/img/sertificate/1.jpg"  alt="Сертификат качества продукции")
+                                    .certificates__name 1. Сертификат качества продукции
+                                a(href="static/images/img/sertificate/2.jpg" data-fancybox="sert" data-caption="Сертификат соответствия").certificates__item
+                                    .certificates__img
+                                        img(src="static/images/img/sertificate/2.jpg"  alt="Сертификат соответствия")
+                                    .certificates__name 2. Сертификат соответствия
+                                a(href="static/images/img/sertificate/3.jpg" data-fancybox="sert" data-caption="Гарантийный талон").certificates__item
+                                    .certificates__img
+                                        img(src="static/images/img/sertificate/3.jpg"  alt="Гарантийный талон")
+                                    .certificates__name 3. Гарантийный талон
+                                a(href="static/images/img/sertificate/4.jpg" data-fancybox="sert" data-caption="Инструкция по пользованию").certificates__item
+                                    .certificates__img
+                                        img(src="static/images/img/sertificate/4.jpg"  alt="Инструкция по пользованию")
+                                    .certificates__name 4. Инструкция по пользованию
+                        .mapOptions__item
+                            .mounting
+                                p Услуги монтажа фильтров  Компания ФИЛЬТРОЛОГИЯ на базе собственной лаборатории проводит исследования воды. 
+                                p Наша лаборатория определяет качество воды, в т.ч. наличия сторонних примесей, организмом, а также параметры жесткости. Итоги анализа предоставляются в виде заключения, а также предложения по подбору оптимального решения фильтрации воды.
+                                a(href="#" class="mounting__info") 
+                                    span Подробнее

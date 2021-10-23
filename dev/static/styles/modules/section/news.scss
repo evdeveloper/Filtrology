@@ -1,0 +1,186 @@
+.s-news {
+    padding: 60px 0;
+    background-color: $white;
+}
+
+.sliderNews {
+    position: relative;
+    width: 100%;
+    max-width: 1080px;
+    margin: 20px auto 0;
+    & > img {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 80px;
+        @include media(767) {
+            max-width: calc(100% - 30px);
+        }
+    }
+    &__list {
+        .slick-track {
+            display: flex;
+            padding-top: 100px;
+            height: 630px;
+            @include media(414) {
+                padding-top: 0;
+                height: 450px;
+            }
+        }
+        .slick-list {
+            @include media(767) {
+                margin: 0 -15px;
+            }
+        }
+    }
+    &__item {
+        width: 285px;
+        height: 355px;
+        border-radius: 10px;
+        background-color: $white;
+        box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.12);
+        margin-right: 90px;
+        transition: all .3s;
+        @include media(767) {
+            margin-right: 60px;
+        }
+        @include media(414) {
+            margin-right: 30px;
+        }
+        &.slick-center {
+            transform: scale(1.4);
+            @include media(767) {
+                transform: scale(1.2)
+            }
+            @include media(414) {
+                transform: scale(1)
+            }
+            .sliderNews__top {
+                opacity: 1;
+            }
+        }
+    }
+    &__top {
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 168px;
+        transition: opacity .3s;
+        opacity: .5;
+        border-radius: 10px 10px 0 0;
+    }
+    &__title {
+        margin-bottom: 20px;
+        font-size: 13px;
+        font-weight: bold;
+    }
+    &__body {
+        display: flex;
+        flex-direction: column;
+        padding: 25px 20px;
+        height: 190px;
+        p {
+            font-size: 11px;
+            margin-bottom: 20px;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+        }
+        a {
+            margin-top: auto;
+            font-size: 11px;
+            transition: all .3s;
+            color: #00adab;
+            &:hover,
+            &:focus {
+                color: #007078;
+                span { border-color: transparent; }
+            }
+            span {
+                border-bottom: 1px solid;
+            }
+        }
+    }
+    &__arrows {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 20px;
+        display: flex;
+        align-items: center;
+        @include media(767) {
+            left: auto;
+            right: 15px;
+            transform: translateX(0);
+        }
+        @include media(414) {
+            right: 0;
+        }
+    }
+    &__arrow {
+        cursor: pointer;
+        &:not(:last-child) {
+            margin-right: 60px;
+            @include media(767) {
+                margin-right: 30px;
+            }
+        }
+        &.slick-disabled {
+            .sliderNews__arrow-icon {
+                fill: $black;
+            }
+        }
+        &-icon {
+            @include size(35px);
+            fill: #00aca9;
+            transition: all .3s;
+            @include media(414) {
+                @include size(25px);
+            }
+        }
+    }
+    .slider-dots {
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%);
+    }
+}
+
+
+.show-all {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    bottom: 30px;
+    display: flex;
+    align-items: center;
+    color: #00aca9;
+    transition: all .3s;
+    font-size: 16px;
+    font-weight: bold;
+    @include media(767) {
+        left: 15px;
+    }
+    @include media(414) {
+        left: 0;
+        bottom: 25px;
+        font-size: 14px;
+    }
+    &__icon {
+        fill: #00aca9;
+        @include size(11px);
+        transition: all .3s;
+        margin-left: 15px;
+        @include media(414) {
+            @include size(10px);
+            margin-left: 10px
+        }
+    }
+    &:hover {
+        color: #007078;
+        .show-all__icon {
+            fill: #007078;
+        }
+    }
+}

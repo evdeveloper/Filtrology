@@ -1,0 +1,49 @@
+.s-news 
+    .container
+        .section-title.mb-30
+            .section-title__text
+                img(src="static/images/img/title-img.png" alt="Картинка")
+                | Наши новости
+        p Узнайте больше о нас и наших услугах
+
+        .sliderNews
+            img(src="static/images/img/news-dots.png" alt="Картинка")
+            a(href="#").show-all
+                | Смотреть все
+                +icon('arrow-next','show-all__icon')
+            .sliderNews__list(data-slider-news)
+                .sliderNews__item
+                    .sliderNews__top(style="background: url('static/images/img/news/1.png')")
+                    .sliderNews__body
+                        .sliderNews__title Как бороться с загрязнителями: советы исследователя из США Питера Картрайта
+                        p Спасибо большое за великолепный дизайн Несмотря на скромную цену, продукт представлен в упаковке, картонная, зеленая. Несмотря на скромную цену, продукт представлен в упаковке, картонная, зеленая.
+                        a(href="#") 
+                            span Подробнее 
+
+                .sliderNews__item
+                    .sliderNews__top(style="background: url('static/images/img/news/2.png')")
+                    .sliderNews__body
+                        .sliderNews__title Как бороться с загрязнителями: советы исследователя из США Питера Картрайта
+                        p Спасибо большое за великолепный дизайн Несмотря на скромную цену, продукт представлен в упаковке, картонная, зеленая. Несмотря на скромную цену, продукт представлен в упаковке, картонная, зеленая.
+                        a(href="#") 
+                            span Подробнее 
+                .sliderNews__item
+                    .sliderNews__top(style="background: url('static/images/img/news/3.png')")
+                    .sliderNews__body
+                        .sliderNews__title Как бороться с загрязнителями: советы исследователя из США Питера Картрайта
+                        p Спасибо большое за великолепный дизайн Несмотря на скромную цену, продукт представлен в упаковке, картонная, зеленая. Несмотря на скромную цену, продукт представлен в упаковке, картонная, зеленая.
+                        a(href="#") 
+                            span Подробнее 
+                .sliderNews__item
+                    .sliderNews__top(style="background: url('static/images/img/news/3.png')")
+                    .sliderNews__body
+                        .sliderNews__title Как бороться с загрязнителями: советы исследователя из США Питера Картрайта
+                        p Спасибо большое за великолепный дизайн Несмотря на скромную цену, продукт представлен в упаковке, картонная, зеленая. Несмотря на скромную цену, продукт представлен в упаковке, картонная, зеленая.
+                        a(href="#") 
+                            span Подробнее 
+            .sliderNews__arrows
+                .sliderNews__arrow.sliderNews__prev
+                    +icon('left-arrow','sliderNews__arrow-icon')
+                .sliderNews__arrow.sliderNews__next
+                    +icon('right-arrow','sliderNews__arrow-icon')
+

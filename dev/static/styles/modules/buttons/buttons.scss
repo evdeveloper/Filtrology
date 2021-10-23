@@ -1,0 +1,72 @@
+.Button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    color: $white;
+    font-weight: 500;
+    font-size: 15px;
+    user-select: none;
+    outline: none;
+    text-align: center;
+    transition: all .3s;
+    cursor: pointer;
+    height: 40px;
+    background-color: #00aca9;
+    border-radius: 5px;
+    &:hover,
+    &:focus {
+        background-color: #068f99;
+    }
+    &-quest {
+        max-width: 250px;
+        height: 75px;
+        font-size: 16px;
+        background-color: #00bfce;
+        border: 10px solid #b5ecf1;
+        border-radius: 50px;
+        transition: all .2s;
+        &:hover,
+        &:focus {
+            background-color: #05a4af;
+            border-color: #b6e6ea;
+        }
+        @include media(767) {
+            max-width: 200px;
+            height: 60px;
+            font-size: 14px;
+        }
+    }
+    &-send {
+        max-width: 320px;
+        font-size: 18px;
+        border-radius: 50px;
+        height: 55px;
+        @include media(900) {
+            max-width: 270px;
+            height: 45px;
+        }
+    }
+    &-basket {
+        width: auto;
+        border-radius: 10px;
+        font-size: 16px;
+        padding: 0 20px;
+        &__icon {
+            @include size(24px);
+            fill: $white;
+            margin-right: 10px;
+        }
+    }
+    &-oneclick {
+        width: auto;
+        padding: 0 20px;
+        border: 1px solid #00aca9;
+        background-color: transparent;
+        border-radius: 10px;
+        color: #00aca9;
+        &:hover {
+            color: $white;
+        }
+    }
+}

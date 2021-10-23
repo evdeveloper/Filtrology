@@ -1,0 +1,148 @@
+.footer {
+    padding: 60px 0;
+    flex: 0 0 auto;
+    color: $white;
+    font-weight: 300;
+    background-color: #3b3b3b;
+    @include media(460) {
+        padding: 30px 0;
+    }
+    &-mobile {
+        display: none;
+        @include media(460) {
+            display: block;
+            margin-top: 30px;
+        }
+    }
+    &__inner {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        @include media(460) {
+            flex-direction: column;
+        }
+    }
+    &__logo {
+        margin-bottom: 40px;
+        @include media(460) {
+            margin-bottom: 30px;
+        }
+        img {
+            max-width: 330px;
+            @include media(460) {
+                max-width: 240px;
+                height: 33px;
+            }
+        }
+    }
+    &__col {
+        &:first-child,
+        &:last-child {
+            display: flex;
+            flex-direction: column;
+        }
+        @include media(600) {
+            margin-bottom: 30px;
+        }
+        &:first-child {
+            .copyright,
+            .performer {
+                @include media(460) { display: none; }
+            }
+        }
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.copyright {
+    margin-bottom: 30px;
+    @include media(460) {
+        margin-bottom: 15px;
+    }
+}
+
+.performer {
+    color: $white;
+    margin-top: auto;
+    img {
+        margin-left: 20px;
+    }
+}
+
+.column {
+    &__link {
+        a {
+            display: block;
+            color: $white;
+            transition: color .3s;
+            &:hover,
+            &:focus { color: #66ebe9; }
+        }
+    }
+    &__title {
+        font-size: 18px;
+        text-transform: uppercase;
+        color: #66ebe9;
+        margin-bottom: 30px;
+        @include media(460) {
+            display: none;
+        }
+    }
+    &__phone {
+        a {
+            font-size: 18px;
+            margin-bottom: 12px;
+            &:last-child {
+                margin-bottom: 40px;
+                @include media(460) {
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+    &__email {
+        margin-bottom: 40px;
+        a { font-size: 16px; }
+    }
+    &__list {
+        a {
+            font-size: 16px;
+            &:not(:last-child) {
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
+
+
+.f-socials {
+    &__list {
+        display: flex;
+        align-items: flex-end;
+        a {
+            &:not(:last-child) {
+                margin-right: 20px;
+                img {
+                    height: 30px;
+                    @include media(767) {
+                        max-width: 35px;
+                    }
+                }
+            }
+            &:last-child {
+                img {
+                    height: 40px;
+                    @include media(767) {
+                        height: 35px;
+                    }
+                }
+            }
+        }
+    }
+    &__title {
+        margin-bottom: 12px;
+        font-size: 16px;
+    }
+}

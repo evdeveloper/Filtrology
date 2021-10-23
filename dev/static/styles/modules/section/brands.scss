@@ -1,0 +1,94 @@
+.s-brands {
+    padding: 75px 0 90px;
+    background: rgb(248,248,249);
+    background: linear-gradient(180deg, rgba(248,248,249,1) 0%, rgba(255,255,255,1) 100%);
+    @include media(767) {
+        padding: 50px 0;
+    }
+    @include media(414) {
+        padding: 35px 0;
+    }
+}
+
+
+.brands {
+    margin-top: 60px;
+    @include media(960) {
+        margin-top: 20px;
+    }
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        @include media(960) {
+            justify-content: center;
+        }
+        .brands__item {
+            display: flex;
+        }
+        .slick-track {
+            @include media(960) {
+                padding: 20px 0;
+            }
+        }
+    }
+    &__link {
+        width: 100%;
+        position: absolute;
+        bottom: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #878787;
+        font-weight: 300;
+        transition: color .3s;
+    }
+    &__icon {
+        fill: #878787;
+        @include size(10px);
+        margin-left: 20px;
+        transition: fill .3s;
+    }
+    &__item {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: all .3s;
+        flex: 0 0 20%;
+        height: 234px;
+        @include media(960) {
+            height: 170px;
+            padding: 0 20px;
+        }
+        img {
+            max-width: 100%;
+        }
+        &:after {
+            content: '';
+            position: absolute;
+            z-index: 1;
+            opacity: 0;
+            transition: all .3s;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            box-shadow: 0px 0px 26px 0px rgba(0, 0, 0, 0.15);
+        }
+        &:hover {
+            &:after { opacity: 1; }
+            .brands__icon { fill: #00adab; }
+            .brands__link { color: #00adab; }
+            img {
+                filter: invert(15%) sepia(88%) saturate(2462%) hue-rotate(200deg) brightness(102%) contrast(101%);
+            }
+        }
+        &:nth-child(odd) {
+            background-color: #f4f4f4;
+        }
+        &:nth-child(n+6) {
+            flex: 0 0 25%;
+        }
+    }
+}
