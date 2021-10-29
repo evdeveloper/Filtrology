@@ -32,7 +32,6 @@
     &-gallery {
         display: flex;
         margin-right: 50px;
-        height: 572px;
         @include media(1170) {
             margin-right: 0;
             margin-bottom: 30px;
@@ -40,7 +39,6 @@
         @include media(600) {
             flex-wrap: wrap;
             justify-content: center;
-            height: auto;
         }
         .slick-slide img {
             max-width: 100%;
