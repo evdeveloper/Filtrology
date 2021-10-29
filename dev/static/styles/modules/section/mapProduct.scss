@@ -39,6 +39,8 @@
         }
         @include media(600) {
             flex-wrap: wrap;
+            justify-content: center;
+            height: auto;
         }
         .slick-slide img {
             max-width: 100%;
@@ -50,10 +52,17 @@
         position: relative;
         max-width: 450px;
         height: 450px;
+        overflow: hidden;
         cursor: pointer;
         @include media(600) {
             margin-bottom: 15px;
         }
+
+        @include media(450) {
+            max-width: 400px;
+            height: 400px;
+        }
+
         @include media(414) {
             max-width: 350px;
             height: 350px;
@@ -80,42 +89,41 @@
                 position: absolute;
                 left: 0;
             }
+            img {
+                max-width: 100%;
+            }
             .i-card__status { top: 20px; }
             .i-card__sale { top: 60px; }
         }
     }
     &-thumbs {
         width: 100%;
-        max-width: 100px;
         margin-right: 20px;
+        height: 450px;
+        overflow: hidden;
         @include media(600) {
+            max-width: 438px;
             order: 1;
-            margin: auto;
-            height: 102px;
-            max-width: 440px;
-            padding-top: 5px
+            height: auto;
+            margin-right: 0;
         }
         @include media(450) {
             max-width: 400px;
-        }
-        @include media(414) {
-            max-width: 350px;
-        }
-        @include media(360) {
-            max-width: 300px;
+            padding: 0 5px;
         }
         &__slide {
             display: flex;
-            margin: 10px 0;
             align-items: center;
+            justify-content: center;
             cursor: pointer;
             outline: none;
             @include media(600) {
-                margin: 0 5px;
+                max-width: 100px;
                 border: 1px solid #e6e6e6;
+                height: 100px;
             }
-            @include media(414) {
-                height: 80px;
+            @include media(450) {
+                max-width: 100%;
             }
         }
     }

@@ -13,37 +13,38 @@
                 h1.mapProduct__title(itemprop="name") Фильтр для воды Ecosoft Standart
                 .mapCard(itemprop="offers" itemscope="" itemtype="http://schema.org/Offer")
                     .mapCard-gallery
-                        .mapCard-thumbs(data-map-thumbs)
-                            .mapCard-thumbs__slide
-                                img(src="static/images/img/map-slider/2.jpg" itemprop="image" alt="Слайдер")
-                            .mapCard-thumbs__slide
-                                img(src="static/images/img/map-slider/3.jpg" itemprop="image" alt="Слайдер")
-                            .mapCard-thumbs__slide
-                                img(src="static/images/img/map-slider/4.jpg" itemprop="image" alt="Слайдер")
-                            .mapCard-thumbs__slide
-                                img(src="static/images/img/map-slider/5.jpg" itemprop="image" alt="Слайдер")
-                            .mapCard-thumbs__slide
-                                img(src="static/images/img/map-slider/5.jpg" itemprop="image" alt="Слайдер")
-                        .mapCard-sliders
+                        .mapCard-thumbs.swiper-container
+                            .mapCard-thumbs__inner.swiper-wrapper
+                                .mapCard-thumbs__slide.swiper-slide
+                                    img(src="static/images/img/map-slider/2.jpg" itemprop="image" alt="Слайдер")
+                                .mapCard-thumbs__slide.swiper-slide
+                                    img(src="static/images/img/map-slider/3.jpg" itemprop="image" alt="Слайдер")
+                                .mapCard-thumbs__slide.swiper-slide
+                                    img(src="static/images/img/map-slider/4.jpg" itemprop="image" alt="Слайдер")
+                                .mapCard-thumbs__slide.swiper-slide
+                                    img(src="static/images/img/map-slider/5.jpg" itemprop="image" alt="Слайдер")
+                                .mapCard-thumbs__slide.swiper-slide
+                                    img(src="static/images/img/map-slider/5.jpg" itemprop="image" alt="Слайдер")
+                        .mapCard-sliders.swiper-container
                             +icon('lupe','mapCard-sliders__icon')
-                            .mapCard-slider(data-map-slider)
-                                a(href="static/images/img/map-slider/1.jpg" data-fancybox="gallery" data-caption="Фильтр 1").mapCard-slider__slide
+                            .mapCard-slider.swiper-wrapper
+                                a(href="static/images/img/map-slider/1.jpg" data-fancybox="gallery" data-caption="Фильтр 1").mapCard-slider__slide.swiper-slide
                                     .i-card__status._red распродажа
                                     img(src="static/images/img/map-slider/1.jpg" itemprop="image" alt="Слайдер")
-                                a(href="static/images/img/map-slider/1.jpg" data-fancybox="gallery" data-caption="Фильтр 2").mapCard-slider__slide
+                                a(href="static/images/img/map-slider/1.jpg" data-fancybox="gallery" data-caption="Фильтр 2").mapCard-slider__slide.swiper-slide
                                     .i-card__status._red распродажа
                                     .i-card__sale
                                         span -30%
                                         img(src="static/images/img/plashka.png" alt="Картинка")
                                     img(src="static/images/img/map-slider/1.jpg" itemprop="image"  alt="Слайдер")
-                                a(href="static/images/img/map-slider/1.jpg" data-fancybox="gallery" data-caption="Фильтр 3").mapCard-slider__slide
+                                a(href="static/images/img/map-slider/1.jpg" data-fancybox="gallery" data-caption="Фильтр 3").mapCard-slider__slide.swiper-slide
                                     img(src="static/images/img/map-slider/1.jpg" itemprop="image" alt="Слайдер")
-                                a(href="static/images/img/map-slider/1.jpg" data-fancybox="gallery" data-caption="Фильтр 4").mapCard-slider__slide
+                                a(href="static/images/img/map-slider/1.jpg" data-fancybox="gallery" data-caption="Фильтр 4").mapCard-slider__slide.swiper-slide
                                     .i-card__sale
                                         span -30%
                                         img(src="static/images/img/plashka.png" alt="Картинка")
                                     img(src="static/images/img/map-slider/1.jpg" itemprop="image" alt="Слайдер")
-                                a(href="static/images/img/map-slider/1.jpg" data-fancybox="gallery" data-caption="Фильтр 5").mapCard-slider__slide
+                                a(href="static/images/img/map-slider/1.jpg" data-fancybox="gallery" data-caption="Фильтр 5").mapCard-slider__slide.swiper-slide
                                     img(src="static/images/img/map-slider/1.jpg" itemprop="image" alt="Слайдер")
                     .mapCard-info
                         .mapCard-info__top

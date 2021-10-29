@@ -34,50 +34,52 @@ $(document).ready(function () {
     filterClose: ".filterMobile__close",
   };
 
-  $('[data-map-thumbs]').slick({
-    vertical: true,
-    infinite: true,
-    verticalSwiping: true,
-    slidesPerRow: 4,
-    arrows: false,
-    slidesToShow: 4,
-    asNavFor: '[data-map-slider]',
-    focusOnSelect: true,
-    responsive: [
-      {
-        breakpoint: 600,
-        settings: {
-          vertical: false,
-          variableWidth: true,
-        }
-      },
-      {
-        breakpoint: 450,
-        settings: {
-          vertical: false,
-          slidesPerRow: 3,
-          slidesToShow: 3,
-        }
-      },
-    ]
-  });
-  $('[data-map-slider]').slick({
-    vertical: true,
-    infinite: true,
-    slidesPerRow: 1,
-    slidesToShow: 1,
-    asNavFor: '[data-map-thumbs]',
-    arrows: false,
-    draggable: false,
-    responsive: [
-      {
-        breakpoint: 414,
-        settings: {
-          vertical: false
-        }
-      },
-    ]
-  });
+  // $('[data-map-thumbs]').slick({
+  //   vertical: true,
+  //   infinite: true,
+  //   verticalSwiping: true,
+  //   slidesPerRow: 4,
+  //   arrows: false,
+  //   slidesToShow: 4,
+  //   asNavFor: '[data-map-slider]',
+  //   focusOnSelect: true,
+  //   responsive: [
+  //     {
+  //       breakpoint: 600,
+  //       settings: {
+  //         vertical: false,
+  //         variableWidth: true,
+  //       }
+  //     },
+  //     {
+  //       breakpoint: 450,
+  //       settings: {
+  //         vertical: false,
+  //         slidesPerRow: 3,
+  //         slidesToShow: 3,
+  //       }
+  //     },
+  //   ]
+  // });
+  // $('[data-map-slider]').slick({
+  //   vertical: true,
+  //   infinite: true,
+  //   slidesPerRow: 1,
+  //   slidesToShow: 1,
+  //   asNavFor: '[data-map-thumbs]',
+  //   arrows: false,
+  //   draggable: false,
+  //   responsive: [
+  //     {
+  //       breakpoint: 414,
+  //       settings: {
+  //         vertical: false
+  //       }
+  //     },
+  //   ]
+  // });
+
+
 
   // function pagination() {
   //   let paginationCount = $('.pagination ul li');
@@ -509,6 +511,53 @@ $(document).on("click", selector.toggleBtnMenu, function () {
     $(".mapOptions .mapOptions__tab").addClass('_active').siblings().removeClass('_active').eq($(this).index()).addClass("_active");
   $(".mapOptions .mapOptions__item").hide().eq($(this).index()).fadeIn();
 }).eq(0).addClass("_active");
+
+
+
+const galleryTop = new Swiper(".mapCard-sliders", {
+  slidesPerView: 1,
+  grabCursor: true,
+  loop: true,
+  arrows: false,
+  keyboard: {
+      enabled: true,
+      onlyInViewport: false
+  }
+});
+const galleryThumbs = new Swiper(".mapCard-thumbs", {
+  slidesPerView: 4,
+  freeMode: true,
+  loop: true,
+  slideToClickedSlide: true,
+  keyboard: {
+      enabled: true,
+      onlyInViewport: false
+  },
+  breakpoints: {
+      0: { 
+        spaceBetween: 20,
+      },
+      600: {
+        direction: 'vertical',
+        spaceBetween: 10
+      },
+      450: {
+        spaceBetween: 10,
+        slidesPerView: 3
+      },
+      414: {
+        spaceBetween: 10
+      },
+      320: {
+        direction: 'horizontal',
+        spaceBetween: 10,
+        slidesPerView: 2,
+        centeredSlides: true
+      }
+  }
+});
+galleryTop.controller.control = galleryThumbs;
+galleryThumbs.controller.control = galleryTop; 
 
 });
 

@@ -8,6 +8,7 @@
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta name="color-theme" content="">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
     <link rel="stylesheet" type="text/css" href="static/css/styles.min.css?v=1.1"><!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script><![endif]-->
   </head>
@@ -20,7 +21,7 @@
               <div class="m-dropdown" data-toggle-btn-menu>
                 <svg class="svg-sprite-icon  icon-burger m-dropdown__icon">
                   <use xlink:href="static/images/svg/symbol/sprite.svg#burger"></use>
-                </svg>каталог
+                </svg><span>каталог</span>
                 <div class="m-dropdown__btn"></div>
                 <div class="m-dropdown__inner">
                   <div class="m-dropdown__list">
@@ -480,7 +481,7 @@
               <div class="m-dropdown">
                 <svg class="svg-sprite-icon  icon-burger m-dropdown__icon">
                   <use xlink:href="static/images/svg/symbol/sprite.svg#burger"></use>
-                </svg>каталог
+                </svg><span>каталог</span>
                 <div class="m-dropdown__btn"></div>
                 <div class="m-dropdown__inner">
                   <div class="m-dropdown__list">
@@ -990,22 +991,24 @@
                 <h1 class="mapProduct__title" itemprop="name">Фильтр для воды Ecosoft Standart</h1>
                 <div class="mapCard" itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
                   <div class="mapCard-gallery">
-                    <div class="mapCard-thumbs" data-map-thumbs>
-                      <div class="mapCard-thumbs__slide"><img src="static/images/img/map-slider/2.jpg" itemprop="image" alt="Слайдер"></div>
-                      <div class="mapCard-thumbs__slide"><img src="static/images/img/map-slider/3.jpg" itemprop="image" alt="Слайдер"></div>
-                      <div class="mapCard-thumbs__slide"><img src="static/images/img/map-slider/4.jpg" itemprop="image" alt="Слайдер"></div>
-                      <div class="mapCard-thumbs__slide"><img src="static/images/img/map-slider/5.jpg" itemprop="image" alt="Слайдер"></div>
-                      <div class="mapCard-thumbs__slide"><img src="static/images/img/map-slider/5.jpg" itemprop="image" alt="Слайдер"></div>
+                    <div class="mapCard-thumbs swiper-container">
+                      <div class="mapCard-thumbs__inner swiper-wrapper">
+                        <div class="mapCard-thumbs__slide swiper-slide"><img src="static/images/img/map-slider/2.jpg" itemprop="image" alt="Слайдер"></div>
+                        <div class="mapCard-thumbs__slide swiper-slide"><img src="static/images/img/map-slider/3.jpg" itemprop="image" alt="Слайдер"></div>
+                        <div class="mapCard-thumbs__slide swiper-slide"><img src="static/images/img/map-slider/4.jpg" itemprop="image" alt="Слайдер"></div>
+                        <div class="mapCard-thumbs__slide swiper-slide"><img src="static/images/img/map-slider/5.jpg" itemprop="image" alt="Слайдер"></div>
+                        <div class="mapCard-thumbs__slide swiper-slide"><img src="static/images/img/map-slider/5.jpg" itemprop="image" alt="Слайдер"></div>
+                      </div>
                     </div>
-                    <div class="mapCard-sliders">
+                    <div class="mapCard-sliders swiper-container">
                       <svg class="svg-sprite-icon  icon-lupe mapCard-sliders__icon">
                         <use xlink:href="static/images/svg/symbol/sprite.svg#lupe"></use>
                       </svg>
-                      <div class="mapCard-slider" data-map-slider><a class="mapCard-slider__slide" href="static/images/img/map-slider/1.jpg" data-fancybox="gallery" data-caption="Фильтр 1">
-                          <div class="i-card__status _red">распродажа</div><img src="static/images/img/map-slider/1.jpg" itemprop="image" alt="Слайдер"></a><a class="mapCard-slider__slide" href="static/images/img/map-slider/1.jpg" data-fancybox="gallery" data-caption="Фильтр 2">
+                      <div class="mapCard-slider swiper-wrapper"><a class="mapCard-slider__slide swiper-slide" href="static/images/img/map-slider/1.jpg" data-fancybox="gallery" data-caption="Фильтр 1">
+                          <div class="i-card__status _red">распродажа</div><img src="static/images/img/map-slider/1.jpg" itemprop="image" alt="Слайдер"></a><a class="mapCard-slider__slide swiper-slide" href="static/images/img/map-slider/1.jpg" data-fancybox="gallery" data-caption="Фильтр 2">
                           <div class="i-card__status _red">распродажа</div>
-                          <div class="i-card__sale"><span>-30%</span><img src="static/images/img/plashka.png" alt="Картинка"></div><img src="static/images/img/map-slider/1.jpg" itemprop="image" alt="Слайдер"></a><a class="mapCard-slider__slide" href="static/images/img/map-slider/1.jpg" data-fancybox="gallery" data-caption="Фильтр 3"><img src="static/images/img/map-slider/1.jpg" itemprop="image" alt="Слайдер"></a><a class="mapCard-slider__slide" href="static/images/img/map-slider/1.jpg" data-fancybox="gallery" data-caption="Фильтр 4">
-                          <div class="i-card__sale"><span>-30%</span><img src="static/images/img/plashka.png" alt="Картинка"></div><img src="static/images/img/map-slider/1.jpg" itemprop="image" alt="Слайдер"></a><a class="mapCard-slider__slide" href="static/images/img/map-slider/1.jpg" data-fancybox="gallery" data-caption="Фильтр 5"><img src="static/images/img/map-slider/1.jpg" itemprop="image" alt="Слайдер"></a></div>
+                          <div class="i-card__sale"><span>-30%</span><img src="static/images/img/plashka.png" alt="Картинка"></div><img src="static/images/img/map-slider/1.jpg" itemprop="image" alt="Слайдер"></a><a class="mapCard-slider__slide swiper-slide" href="static/images/img/map-slider/1.jpg" data-fancybox="gallery" data-caption="Фильтр 3"><img src="static/images/img/map-slider/1.jpg" itemprop="image" alt="Слайдер"></a><a class="mapCard-slider__slide swiper-slide" href="static/images/img/map-slider/1.jpg" data-fancybox="gallery" data-caption="Фильтр 4">
+                          <div class="i-card__sale"><span>-30%</span><img src="static/images/img/plashka.png" alt="Картинка"></div><img src="static/images/img/map-slider/1.jpg" itemprop="image" alt="Слайдер"></a><a class="mapCard-slider__slide swiper-slide" href="static/images/img/map-slider/1.jpg" data-fancybox="gallery" data-caption="Фильтр 5"><img src="static/images/img/map-slider/1.jpg" itemprop="image" alt="Слайдер"></a></div>
                     </div>
                   </div>
                   <div class="mapCard-info">
@@ -2317,7 +2320,8 @@
     <div class="popup__overlay" style="z-index: 99999;"></div>
     <div class="filter__overlay"></div>
     <script src="static/js/jquery-3.3.1.min.js"></script>
-    <script src="static/js/libs.min.js" defer></script>
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script src="static/js/libs.min.js"></script>
     <script src="static/js/popup.js"></script>
     <script src="static/js/main.js"></script>
   </body>
